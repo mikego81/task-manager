@@ -1,7 +1,7 @@
 const express = require('express')
 require('./db/mongoose') // this ensures file runs and connects to db
-const userRouter = require('./routers/user')
-const taskRouter = require('./routers/task')
+const userRouter = require('./routers/user-router')
+const taskRouter = require('./routers/task-router')
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -22,5 +22,5 @@ app.listen(port, () => {
 **    TESTING   
 */
 
-const Task = require('./models/task')
-const User = require('./models/user')
+const Task = require('./models/task-model')
+const User = require('./models/user-model')
